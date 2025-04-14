@@ -7,7 +7,7 @@ Este projeto tem como objetivo o gerenciamento de espaços publicitários físic
 ## 📦 Estrutura dos diretórios
 
 ```
-espacos-publicitarios-backend/
+espacos-publicitarios-backend-main/
 ├── app/
 │   ├── __init__.py
 │   ├── models.py
@@ -19,7 +19,7 @@ espacos-publicitarios-backend/
 ├── requirements.txt
 ├── run.py
 
-espacos-publicitarios-frontend/
+espacos-publicitarios-frontend-main/
 ├── index.html
 ├── style.css
 ├── script.js
@@ -49,9 +49,29 @@ espacos-publicitarios-frontend/
    - `espacos-publicitarios-backend`
    - `espacos-publicitarios-frontend`
 
-2. Certifique-se de que o `docker-compose.yml` está no diretório do backend e que o caminho de build do frontend aponta corretamente para `../espacos-publicitarios-frontend`
+2. Certifique-se de que o `docker-compose.yml` está no diretório do backend e que o caminho de build do frontend aponta corretamente para `../espacos-publicitarios-frontend-main`
 
-3. No terminal, acesse o diretório do backend:
+3. Organização dos Diretórios
+
+Após extrair o ZIP, a estrutura do frontend ficará assim:
+
+    espacos-publicitarios-frontend-main/
+    └── espacos-publicitarios-frontend-main/
+        ├── Dockerfile
+        ├── (outros arquivos)
+
+**Ação Necessária:**
+
+Recorte a pasta interna **espacos-publicitarios-frontend-main** e cole seus arquivos diretamente na pasta externa, de modo que a estrutura final fique assim:
+
+    espacos-publicitarios-frontend-main/
+    ├── Dockerfile
+    ├── (outros arquivos)
+
+Essa reorganização é necessária para garantir a correta execução do Docker Compose.
+
+
+4. No terminal, acesse o diretório do backend:
 
 ```bash
 cd espacos-publicitarios-backend
