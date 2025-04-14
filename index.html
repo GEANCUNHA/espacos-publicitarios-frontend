@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Espaços Publicitários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Espaços Publicitários</h1>
+    <p class="subtitulo">Visualize os espaços ativos e disponíveis por loja e marca</p>
+  </header>
+
+  <!-- Botão de novo espaço -->
+  <div class="novo-espaco-barra">
+    <button id="abrir-modal">+ Novo Espaço</button>
+  </div>
+
+  <div class="status-bar">
+    <p id="contagem">Carregando...</p>
+    <div class="filtro-container">
+      <label for="filtro-loja">Filtrar por loja:</label>
+      <select id="filtro-loja">
+        <option value="todas">Todas</option>
+      </select>
+    </div>
+  </div>
+
+  <main>
+    <div id="espacos-container" class="espacos-grid"></div>
+  </main>
+
+  <!-- Modal de cadastro -->
+  <div id="modal" class="modal-overlay">
+    <div class="modal">
+      <h2>Cadastrar Novo Espaço</h2>
+      <form id="form-novo-espaco">
+        <input type="text" id="nome" placeholder="Nome do espaço" required />
+        <textarea id="descricao" placeholder="Descrição (opcional)"></textarea>
+
+        <select id="status" required>
+          <option value="">Status</option>
+          <option value="disponível">Disponível</option>
+          <option value="ocupado">Ocupado</option>
+        </select>
+
+        <select id="loja" required>
+          <option value="">Loja</option>
+        </select>
+
+        <select id="marca" required>
+          <option value="">Marca</option>
+        </select>
+
+        <div class="botoes-modal">
+          <button type="submit">Salvar</button>
+          <button type="button" id="fechar-modal">Cancelar</button>
+        </div>
+        <p id="msg-post"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sidebar de anúncios -->
+  <aside class="ads-sidebar">
+    <h2>Anunciado Aqui</h2>
+    <div id="ads" class="ads-lista"></div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
