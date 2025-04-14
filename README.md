@@ -108,20 +108,6 @@ docker-compose up --build
 
 ![Arquitetura da aplicação](./docs/arquitetura.png)
 
-```
-+----------------------------+        REST         +--------------------+
-|         Frontend          | <------------------> |      Backend        |
-|  (HTML/CSS/JS + Nginx)    |                     | (Flask + SQLite)    |
-|                           |                     +--------------------+
-|                           |                             |
-|   Consome FakeStore API   |                             | REST
-|       via Fetch() -------->                             v
-+----------------------------+                  +--------------------------+
-                                                | Microserviço Relatórios  |
-                                                |   (Flask separado)       |
-                                                +--------------------------+
-```
-
 ---
 
 ## ✅ Requisitos Atendidos
